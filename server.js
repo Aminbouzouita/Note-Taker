@@ -13,7 +13,7 @@ app.use(express.static(`public`));
 
 app.get(`/api/notes`, function (req, res) {
     var data = JSON.parse(fs.readFileSync(`./db/db.json`,`utf8`));
-    return res.json(data);
+    res.json(data);
 });
 
 app.post(`/api/notes`, function (req, res) {
@@ -22,15 +22,15 @@ app.post(`/api/notes`, function (req, res) {
     note.id = uniqid();
     data.push(note);
     fs.writeFileSync(`./db/db.json`,JSON.stringify(data));
-    res.json(true);
+    res.json(data);
 });
 
 app.delete(`/api/notes/:id`, async function (req, res) {
     data = JSON.parse(fs.readFileSync(`./db/db.json`,`utf8`));
     var id = req.params.id;
-    var chosen = data.filter(note => note.id === id);
+    var chosen = data.filter(note => note.id != id);
     fs.writeFileSync(`./db/db.json`,JSON.stringify(chosen));
-    res.json(true);
+    res.json(data);
 });
 
 app.get(`/notes`, function (req, res) {

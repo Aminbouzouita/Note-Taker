@@ -12,7 +12,7 @@ an application that allows user to save and delete notes
 npm intall
 
 #### URL Github Repo:
-[rep-url](https://aminbouzouita.github.io/Note-Taker/.)
+[https://aminbouzouita.github.io/Note-Taker/.]
 
 
 ---
