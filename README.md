@@ -10,9 +10,10 @@ an application that allows user to save and delete notes
 * [EXPRESS](#EXPRESS)
 ## Installation
 npm intall
-
+#### Heroku link
+https://note-taker-hmw.herokuapp.com/
 #### URL Github Repo:
-https://github.com/Aminbouzouita/Note-Taker
+https://aminbouzouita.github.io/Note-Taker/.
 
 
 ---
